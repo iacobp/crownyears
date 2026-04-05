@@ -21,6 +21,11 @@ export default function Footer() {
             </p>
             <ul className="space-y-2.5 text-sm text-muted">
               <li>
+                <Link href="/blog" className="hover:text-deep transition-colors duration-300">
+                  The Journal
+                </Link>
+              </li>
+              <li>
                 <Link href="/resources" className="hover:text-deep transition-colors duration-300">
                   All Resources
                 </Link>
