@@ -29,7 +29,7 @@ const pillars = [
     title: "Style & Identity",
     subtitle: "Dress like you know exactly who you are.",
     description:
-      "Capsule wardrobes, quiet luxury, silver hair. Because style after 45 is a declaration, not a compromise.",
+      "Capsule wardrobes, quiet luxury, your signature look. Because style after 45 is a declaration, not a compromise.",
     href: "/resources#style",
   },
   {
