@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import NewsletterForm from "@/components/NewsletterForm";
 
@@ -108,6 +109,21 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      {/* Hero image — editorial full-bleed */}
+      <Reveal>
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 py-8">
+          <div className="relative w-full aspect-[16/7] rounded-2xl overflow-hidden">
+            <Image
+              src="/blog/hero-kitchen-morning.jpg"
+              alt="Woman in her crown years — confident, independent, sovereign"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+      </Reveal>
 
       {/* Manifesto — dark strip, editorial typography */}
       <section className="bg-deep text-cream">

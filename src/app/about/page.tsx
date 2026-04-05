@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About — Crown Years",
@@ -7,14 +8,23 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
-      <p className="text-xs uppercase tracking-[0.3em] text-gold mb-3">
+    <div className="max-w-3xl mx-auto px-6 sm:px-8 py-20 sm:py-28">
+      <p className="text-[11px] uppercase tracking-[0.35em] text-gold mb-4">
         About Crown Years
       </p>
-      <h1 className="text-3xl sm:text-4xl font-bold text-deep mb-8 leading-tight">
+      <h1 className="font-serif text-4xl sm:text-5xl text-deep mb-10 leading-[1.1]">
         We exist because the most powerful women on the planet are treated like
         they don&apos;t.
       </h1>
+
+      <div className="relative w-full aspect-[3/4] sm:aspect-[4/3] rounded-2xl overflow-hidden mb-12">
+        <Image
+          src="/blog/portrait-silver-blazer.jpg"
+          alt="Confident woman in her crown years"
+          fill
+          className="object-cover"
+        />
+      </div>
 
       <div className="space-y-6 text-muted leading-relaxed">
         <p>
