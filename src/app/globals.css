@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fdfbf7;
+  --foreground: #1a1715;
+  --gold: #b8944f;
+  --gold-light: #d4b87a;
+  --gold-dark: #8a6d3b;
+  --cream: #f5f0e8;
+  --warm-white: #faf7f2;
+  --muted: #7a7067;
+  --border: #e8e0d4;
+  --card: #ffffff;
+  --deep: #2c2420;
+  --rose: #c9a09a;
+  --sage: #8a9a7e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-cream: var(--cream);
+  --color-warm-white: var(--warm-white);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-deep: var(--deep);
+  --color-rose: var(--rose);
+  --color-sage: var(--sage);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--gold-light);
+  color: var(--foreground);
 }
