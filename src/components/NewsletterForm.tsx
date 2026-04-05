@@ -9,11 +9,11 @@ export default function NewsletterForm() {
       <input
         type="email"
         placeholder="your@email.com"
-        className="flex-1 border border-border rounded-full px-5 py-3 text-sm bg-card focus:outline-none focus:border-gold"
+        className="flex-1 border border-border rounded-full px-6 py-3.5 text-sm bg-card focus:outline-none focus:border-gold transition-colors duration-300"
       />
       <button
         type="submit"
-        className="bg-gold text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gold-dark transition-colors shrink-0"
+        className="bg-deep text-cream px-7 py-3.5 rounded-full text-sm tracking-wide hover:bg-gold transition-colors duration-300 shrink-0"
       >
         Join Free
       </button>
