@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllSlugs, getPost, formatDate } from "@/lib/blog";
 import TableOfContents from "@/components/TableOfContents";
 import RelatedPosts from "@/components/RelatedPosts";
 import NewsletterForm from "@/components/NewsletterForm";
 import Reveal from "@/components/Reveal";
+import ShareButtons from "@/components/ShareButtons";
 
 export const dynamicParams = false;
 
@@ -94,39 +97,107 @@ export default async function BlogPost({
 
       <TableOfContents />
 
-      <article className="max-w-3xl mx-auto px-6 sm:px-8 py-16 sm:py-24">
-        {/* Article header */}
+      {/* Article header — editorial, centered, generous */}
+      <header className="max-w-3xl mx-auto px-6 sm:px-8 pt-16 sm:pt-24 pb-10 text-center">
         <Reveal>
-          <header className="mb-16 text-center">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-gold mb-6">
-              {postMeta.category}
-            </p>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-deep mb-8 leading-[1.08]">
-              {postMeta.title}
-            </h1>
-            <p className="text-muted text-sm">
-              {postMeta.author} &middot; {formatDate(postMeta.date)} &middot;{" "}
-              {post.readingTime} min read
-            </p>
-          </header>
+          <Link
+            href="/blog"
+            className="text-[10px] uppercase tracking-[0.3em] text-gold hover:text-gold-dark transition-colors"
+          >
+            {postMeta.category}
+          </Link>
         </Reveal>
-
-        {/* Article body */}
         <Reveal delay={0.1}>
-          <div className="article-body">
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] text-deep mt-6 mb-8 leading-[1.08] max-w-2xl mx-auto">
+            {postMeta.title}
+          </h1>
+        </Reveal>
+        <Reveal delay={0.2}>
+          <p className="text-muted text-sm mb-6 max-w-lg mx-auto leading-relaxed">
+            {postMeta.description}
+          </p>
+        </Reveal>
+        <Reveal delay={0.25}>
+          <div className="flex items-center justify-center gap-3 text-xs text-muted/70">
+            <span>By {postMeta.author}</span>
+            <span className="text-border">|</span>
+            <time dateTime={postMeta.date}>{formatDate(postMeta.date)}</time>
+            <span className="text-border">|</span>
+            <span>{post.readingTime} min read</span>
+          </div>
+        </Reveal>
+      </header>
+
+      {/* Featured image — full-bleed with contained max-width */}
+      {postMeta.image && (
+        <Reveal>
+          <div className="max-w-5xl mx-auto px-6 sm:px-8 mb-16">
+            <div className="relative w-full aspect-[2/1] rounded-2xl overflow-hidden">
+              <Image
+                src={postMeta.image}
+                alt={postMeta.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </Reveal>
+      )}
+
+      {/* Article body */}
+      <article className="max-w-[680px] mx-auto px-6 sm:px-8 pb-16">
+        <Reveal delay={0.1}>
+          <div className="article-body first-letter:font-serif first-letter:text-6xl first-letter:font-bold first-letter:text-gold first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:leading-none">
             <Post />
           </div>
         </Reveal>
 
+        {/* Tags */}
+        {postMeta.tags && postMeta.tags.length > 0 && (
+          <div className="mt-12 pt-8 border-t border-border flex flex-wrap gap-2">
+            {postMeta.tags.map((tag: string) => (
+              <span
+                key={tag}
+                className="text-[10px] uppercase tracking-[0.2em] text-muted bg-cream px-3 py-1.5 rounded-full"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {/* Share buttons */}
+        <div className="mt-8 pt-8 border-t border-border">
+          <p className="text-[10px] uppercase tracking-[0.3em] text-muted mb-4">
+            Share This Article
+          </p>
+          <ShareButtons title={postMeta.title} slug={slug} />
+        </div>
+
+        {/* Author bio */}
+        <div className="mt-12 pt-8 border-t border-border flex items-start gap-5">
+          <div className="w-14 h-14 rounded-full bg-cream border border-border flex items-center justify-center shrink-0">
+            <span className="text-gold text-xl">&#9827;</span>
+          </div>
+          <div>
+            <p className="font-serif text-lg text-deep mb-1">Crown Years</p>
+            <p className="text-sm text-muted leading-relaxed">
+              Evidence-based tools, guides, and resources for women 45+ who are
+              done being invisible. We sell permission, not products.
+            </p>
+          </div>
+        </div>
+
         {/* Newsletter CTA */}
-        <section className="mt-20 pt-16 border-t border-border text-center">
-          <p className="text-[11px] uppercase tracking-[0.35em] text-gold mb-4">
+        <section className="mt-16 p-10 bg-cream rounded-2xl border border-border text-center">
+          <p className="text-[11px] uppercase tracking-[0.35em] text-gold mb-3">
             The Crown Years Letter
           </p>
-          <h3 className="font-serif text-2xl sm:text-3xl text-deep mb-4">
+          <h3 className="font-serif text-2xl text-deep mb-3">
             One email a week. Zero permission required.
           </h3>
-          <p className="text-muted text-sm mb-8 max-w-sm mx-auto">
+          <p className="text-muted text-sm mb-6 max-w-sm mx-auto">
             Tools, insights, and the occasional reminder that you are the most
             powerful consumer force on the planet.
           </p>
