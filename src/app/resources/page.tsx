@@ -21,10 +21,10 @@ const resources: Resource[] = [
     title: "Gray Divorce Financial Guide",
     description:
       "Asset checklist, settlement calculator, lawyer question scripts, and post-divorce budget planner. Interactive, private, free.",
-    href: "https://graydivorceguide.vercel.app",
+    href: "/divorce",
     category: "Money & Independence",
     status: "live",
-    external: true,
+    external: false,
   },
   {
     title: "The Money After Divorce Roadmap",

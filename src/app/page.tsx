@@ -53,8 +53,8 @@ const liveTools = [
     title: "Gray Divorce Financial Guide",
     description:
       "Interactive asset checklist, settlement calculator, lawyer question scripts, and post-divorce budget planner.",
-    href: "https://graydivorceguide.vercel.app",
-    external: true,
+    href: "/divorce",
+    external: false,
   },
 ];
 

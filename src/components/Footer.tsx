@@ -31,14 +31,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="https://graydivorceguide.vercel.app"
-                  className="hover:text-deep transition-colors duration-300"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Link href="/divorce" className="hover:text-deep transition-colors duration-300">
                   Gray Divorce Guide
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -30,6 +30,12 @@
   --color-deep: var(--deep);
   --color-rose: var(--rose);
   --color-sage: var(--sage);
+  /* Aliases for divorce tool pages */
+  --color-accent: var(--gold);
+  --color-accent-light: var(--gold-light);
+  --color-warm-bg: var(--cream);
+  --color-card-bg: var(--card);
+  --color-success: #4a7c59;
   --font-sans: var(--font-geist-sans);
   --font-serif: var(--font-playfair);
 }
