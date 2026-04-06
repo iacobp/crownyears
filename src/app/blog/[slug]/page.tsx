@@ -131,7 +131,7 @@ export default async function BlogPost({
       {/* Featured image — full-bleed with contained max-width */}
       {postMeta.image && (
         <Reveal>
-          <div className="max-w-5xl mx-auto px-6 sm:px-8 mb-16">
+          <div className="max-w-5xl mx-auto px-6 sm:px-8 mb-16 featured-image">
             <div className="relative w-full aspect-[2/1] rounded-2xl overflow-hidden">
               <Image
                 src={postMeta.image}
