@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navItems = [
@@ -11,6 +12,10 @@ const navItems = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) =>
+    pathname === href || pathname.startsWith(href + "/");
 
   return (
     <header className="border-b border-border bg-card/90 backdrop-blur-md sticky top-0 z-50">
@@ -30,7 +35,11 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-[13px] text-muted hover:text-deep transition-colors duration-300 tracking-wide"
+                className={`text-[13px] transition-colors duration-300 tracking-wide ${
+                  isActive(item.href)
+                    ? "text-deep font-medium"
+                    : "text-muted hover:text-deep"
+                }`}
               >
                 {item.label}
               </Link>
@@ -64,7 +73,9 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block py-2 text-sm text-muted hover:text-deep tracking-wide"
+                className={`block py-2 text-sm tracking-wide ${
+                  isActive(item.href) ? "text-deep font-medium" : "text-muted hover:text-deep"
+                }`}
                 onClick={() => setMenuOpen(false)}
               >
                 {item.label}
