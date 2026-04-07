@@ -8,6 +8,7 @@ import RelatedPosts from "@/components/RelatedPosts";
 import NewsletterForm from "@/components/NewsletterForm";
 import Reveal from "@/components/Reveal";
 import ShareButtons from "@/components/ShareButtons";
+import CrownIcon from "@/components/CrownIcon";
 
 export const dynamicParams = false;
 
@@ -178,7 +179,7 @@ export default async function BlogPost({
         {/* Author bio */}
         <div className="mt-12 pt-8 border-t border-border flex items-start gap-5">
           <div className="w-14 h-14 rounded-full bg-cream border border-border flex items-center justify-center shrink-0">
-            <span className="text-gold text-xl">&#9827;</span>
+            <CrownIcon className="w-6 h-6 text-gold" />
           </div>
           <div>
             <p className="font-serif text-lg text-deep mb-1">Crown Years</p>

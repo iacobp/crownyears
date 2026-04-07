@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import CrownIcon from "@/components/CrownIcon";
 
 const navItems = [
   { href: "/blog", label: "Journal" },
@@ -22,9 +23,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         <div className="flex items-center justify-between h-[72px]">
           <Link href="/" className="flex items-center gap-2.5 group">
-            <span className="text-gold text-lg transition-transform duration-300 group-hover:scale-110">
-              &#9827;
-            </span>
+            <CrownIcon className="w-5 h-5 text-gold transition-transform duration-300 group-hover:scale-110" />
             <span className="font-serif text-xl tracking-tight text-deep">
               Crown Years
             </span>

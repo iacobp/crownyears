@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CrownIcon from "@/components/CrownIcon";
 
 export default function Footer() {
   return (
@@ -7,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2.5 mb-4">
-              <span className="text-gold text-lg">&#9827;</span>
+              <CrownIcon className="w-5 h-5 text-gold" />
               <span className="font-serif text-xl text-deep">Crown Years</span>
             </div>
             <p className="text-sm text-muted max-w-sm leading-relaxed">

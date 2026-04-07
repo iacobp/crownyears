@@ -46,7 +46,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     li: ({ children, ...props }) => (
       <li className="flex items-start gap-3 text-[17px] text-muted leading-[1.8]" {...props}>
-        <span className="text-gold mt-1 shrink-0 text-xs">&#9827;</span>
+        <svg viewBox="0 0 6 6" className="w-1.5 h-1.5 mt-2.5 shrink-0 fill-gold"><circle cx="3" cy="3" r="3"/></svg>
         <span>{children}</span>
       </li>
     ),

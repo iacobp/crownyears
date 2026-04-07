@@ -51,7 +51,7 @@ export default function NewsletterForm() {
       </div>
       <button
         type="submit"
-        className="bg-deep text-cream px-7 py-3.5 rounded-full text-sm tracking-wide hover:bg-gold transition-colors duration-300 shrink-0"
+        className="bg-deep text-cream px-7 py-3.5 rounded-full text-sm tracking-wide hover:bg-gold active:scale-[0.98] transition-all duration-300 shrink-0"
       >
         Join Free
       </button>

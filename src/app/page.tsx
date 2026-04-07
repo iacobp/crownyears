@@ -80,13 +80,13 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
                     href="#resources"
-                    className="inline-block bg-deep text-cream px-8 py-3.5 rounded-full text-sm tracking-wide hover:bg-gold transition-colors duration-300"
+                    className="inline-block bg-deep text-cream px-8 py-3.5 rounded-full text-sm tracking-wide hover:bg-gold active:scale-[0.98] transition-all duration-300"
                   >
                     Explore Free Resources
                   </a>
                   <a
                     href="#newsletter"
-                    className="inline-block border border-deep text-deep px-8 py-3.5 rounded-full text-sm tracking-wide hover:bg-deep hover:text-cream transition-colors duration-300"
+                    className="inline-block border border-deep text-deep px-8 py-3.5 rounded-full text-sm tracking-wide hover:bg-deep hover:text-cream active:scale-[0.98] transition-all duration-300"
                   >
                     Join the Letter
                   </a>
@@ -261,9 +261,7 @@ export default function Home() {
                   "Take up space. Be impossible to ignore.",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm">
-                    <span className="text-gold mt-0.5 shrink-0 text-xs">
-                      &#9827;
-                    </span>
+                    <svg viewBox="0 0 6 6" className="w-1.5 h-1.5 mt-2 shrink-0 fill-gold"><circle cx="3" cy="3" r="3"/></svg>
                     <span className="text-deep leading-relaxed">{item}</span>
                   </li>
                 ))}
@@ -357,7 +355,7 @@ export default function Home() {
                     key={item}
                     className="flex items-start gap-3 text-sm text-deep"
                   >
-                    <span className="text-gold mt-0.5 shrink-0">&#9827;</span>
+                    <svg viewBox="0 0 6 6" className="w-1.5 h-1.5 mt-2 shrink-0 fill-gold"><circle cx="3" cy="3" r="3"/></svg>
                     {item}
                   </li>
                 ))}

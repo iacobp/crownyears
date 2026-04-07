@@ -71,7 +71,7 @@ export default function About() {
             "The best years of your life aren't behind you. They're the ones you finally get to design yourself.",
           ].map((belief) => (
             <li key={belief} className="flex items-start gap-3 text-sm">
-              <span className="text-gold mt-0.5 shrink-0">&#9827;</span>
+              <svg viewBox="0 0 6 6" className="w-1.5 h-1.5 mt-2 shrink-0 fill-gold"><circle cx="3" cy="3" r="3"/></svg>
               <span className="text-deep">{belief}</span>
             </li>
           ))}
