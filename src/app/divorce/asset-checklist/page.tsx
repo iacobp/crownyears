@@ -28,8 +28,8 @@ const initialCategories: Category[] = [
   {
     name: "Retirement & Investments",
     items: [
-      { label: "401(k) / 403(b) accounts — yours", checked: false },
-      { label: "401(k) / 403(b) accounts — spouse's", checked: false },
+      { label: "401(k) / 403(b) accounts: yours", checked: false },
+      { label: "401(k) / 403(b) accounts: spouse's", checked: false },
       { label: "IRA accounts (Traditional and Roth)", checked: false },
       { label: "Pension plans and benefit statements", checked: false },
       { label: "Brokerage / investment accounts", checked: false },
@@ -41,7 +41,7 @@ const initialCategories: Category[] = [
   {
     name: "Real Estate",
     items: [
-      { label: "Primary home — deed, mortgage statement, current value", checked: false },
+      { label: "Primary home: deed, mortgage statement, current value", checked: false },
       { label: "Vacation / second homes", checked: false },
       { label: "Rental properties", checked: false },
       { label: "Vacant land", checked: false },
@@ -53,7 +53,7 @@ const initialCategories: Category[] = [
   {
     name: "Vehicles & Personal Property",
     items: [
-      { label: "Cars — titles, loan statements, current value", checked: false },
+      { label: "Cars: titles, loan statements, current value", checked: false },
       { label: "Boats, RVs, motorcycles", checked: false },
       { label: "Jewelry (especially high-value pieces)", checked: false },
       { label: "Art, antiques, collectibles", checked: false },
@@ -75,8 +75,8 @@ const initialCategories: Category[] = [
     name: "Debts & Liabilities",
     items: [
       { label: "Mortgage balance(s)", checked: false },
-      { label: "Credit card statements — joint accounts", checked: false },
-      { label: "Credit card statements — individual accounts", checked: false },
+      { label: "Credit card statements: joint accounts", checked: false },
+      { label: "Credit card statements: individual accounts", checked: false },
       { label: "Auto loans", checked: false },
       { label: "Student loans", checked: false },
       { label: "Personal loans", checked: false },
@@ -89,7 +89,7 @@ const initialCategories: Category[] = [
     name: "Insurance Policies",
     items: [
       { label: "Health insurance policy details", checked: false },
-      { label: "Life insurance — policies and beneficiaries", checked: false },
+      { label: "Life insurance: policies and beneficiaries", checked: false },
       { label: "Long-term care insurance", checked: false },
       { label: "Disability insurance", checked: false },
       { label: "Homeowner's / renter's insurance", checked: false },
@@ -151,8 +151,8 @@ export default function AssetChecklist() {
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
       <h1 className="text-3xl font-bold mb-2">Divorce Asset Checklist</h1>
       <p className="text-muted mb-8">
-        Check off each item as you locate it. Nothing is saved — this runs
-        entirely in your browser.
+        Check each item as you locate it. Your progress lives in this browser
+        for the current visit.
       </p>
 
       {/* Progress bar */}
@@ -212,16 +212,15 @@ export default function AssetChecklist() {
         <h3 className="font-semibold mb-2">What to do with this list</h3>
         <ul className="text-sm text-muted space-y-2 list-disc list-inside">
           <li>
-            Print or screenshot your progress — bring it to your first lawyer
-            consultation
+            Print or screenshot your progress. Bring it to your first lawyer
+            consultation.
           </li>
           <li>
-            Items you can&apos;t locate may need to be requested through legal
-            discovery
+            Your lawyer can request hard-to-find items through legal discovery.
           </li>
           <li>
-            Don&apos;t worry if you can&apos;t check everything — knowing
-            what&apos;s missing is just as valuable
+            A partial list still gives you valuable information. Mark every
+            missing item.
           </li>
           <li>
             See our{" "}

@@ -4,7 +4,7 @@ import NewsletterPanel from "@/components/NewsletterPanel";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Resources — Crown Years",
+  title: "Resources | Crown Years",
   description:
     "Live financial tools and decision-led guides for gray divorce, personal style, and solo travel in midlife.",
 };
@@ -49,7 +49,7 @@ const editorialRoutes = [
     mode: "Expand",
     title: "Choose a first solo destination",
     description:
-      "Fifteen destinations ordered by ease, energy, and how ready you feel—not by someone else’s bucket list.",
+      "Fifteen destinations ordered by ease, energy, and the size of first step you want to take.",
     href: "/blog/solo-travel-women-over-50",
     action: "Open the travel guide",
   },
@@ -58,15 +58,15 @@ const editorialRoutes = [
 const validationQueue = [
   {
     title: "Before You File Money Dossier",
-    description: "A paid working system will be tested only after the free gray-divorce tools show real demand.",
+    description: "A paid working system moves forward when the free gray-divorce tools show real demand.",
   },
   {
     title: "The Crown Edit",
-    description: "A shoppable editorial letter built around fewer, better recommendations—without owned inventory.",
+    description: "A shoppable editorial letter built around fewer, better partner recommendations.",
   },
   {
     title: "Strength After 50",
-    description: "A bounded challenge considered only with a credible expert partner and an audience signal first.",
+    description: "A focused challenge shaped with a credible expert partner and a clear audience signal.",
   },
 ];
 
@@ -85,9 +85,9 @@ export default function Resources() {
           </Reveal>
           <Reveal delay={0.08} className="lg:col-span-4 lg:col-start-9">
             <p className="text-sm leading-relaxed text-muted">
-              Everything linked below is live. Future ideas are named honestly
-              as things being validated—not dressed up as resources you cannot
-              open yet.
+              Every link below opens something useful today. Future ideas sit
+              in a clearly labeled validation queue while the audience shows us
+              what deserves to come next.
             </p>
           </Reveal>
         </div>
@@ -104,8 +104,7 @@ export default function Resources() {
             </h2>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-cream/65">
               Four private tools turn a complicated transition into a workable
-              sequence. No account is required, and entries stay in your
-              browser.
+              sequence. They open instantly, and your entries stay in your browser.
             </p>
             <Link
               href="/divorce"
@@ -149,7 +148,7 @@ export default function Resources() {
             Define or expand
           </p>
           <h2 className="mt-4 font-serif text-4xl leading-tight text-deep text-balance sm:text-5xl">
-            Read toward a decision, not around a category.
+            Read until the decision feels clear.
           </h2>
         </Reveal>
 
@@ -192,7 +191,7 @@ export default function Resources() {
               Validation queue
             </p>
             <h2 className="mt-4 font-serif text-3xl leading-tight text-deep text-balance">
-              What may come next—if the audience asks for it.
+              What earns its place next.
             </h2>
           </Reveal>
           <div className="divide-y divide-border border-y border-border lg:col-span-7 lg:col-start-6">

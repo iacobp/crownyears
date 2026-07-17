@@ -1,15 +1,10 @@
-"use client";
-
 interface Props {
   title: string;
   slug: string;
 }
 
 export default function ShareButtons({ title, slug }: Props) {
-  const url =
-    typeof window !== "undefined"
-      ? window.location.href
-      : `https://crownyears.vercel.app/blog/${slug}`;
+  const url = `https://crownyears.vercel.app/blog/${slug}`;
 
   const encodedUrl = encodeURIComponent(url);
   const encodedTitle = encodeURIComponent(title);

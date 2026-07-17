@@ -1,4 +1,4 @@
-# Crown Years — Brand and Funnel System
+# Crown Years: Brand and Funnel System
 
 **Status:** Current source of truth
 **Updated:** 2026-07-17
@@ -10,29 +10,29 @@ The April strategy files remain useful research history. This document supersede
 
 **Crown Years turns consequential midlife decisions into clear next moves for women 45–65.**
 
-The audience is a demographic, not a single niche. Crown Years earns trust by meeting a woman in the specific moment she is living, then leading her to the next useful action.
+The audience spans a rich demographic. Crown Years earns trust by meeting a woman in the specific moment she is living, then leading her to the next useful action.
 
 ### Brand promise
 
-You are not starting over. You are choosing with more information, more leverage, and less explanation.
+You are choosing with more information, more leverage, and less explanation.
 
 ### Public language
 
 - Use **Crown Years** as the brand.
 - Use “Queenager” only as internal audience shorthand. NOON already centers its public identity around the term.
 - Prefer **woman**, **reader**, or the specific life moment over repeated age labels.
-- Permission is an outcome of clarity, not a slogan repeated in every section.
+- Clarity creates permission. Let the reader feel it through the quality of the next step.
 
 ## Audience routes
 
 | Route | Moment | Reader thought | Immediate offer | Primary channel | Next step |
 | --- | --- | --- | --- | --- | --- |
 | **Protect** | High-stakes transition | “My money needs my full attention.” | Gray Divorce Financial Toolkit | Google + Facebook | Free tool → financial dossier test |
-| **Define** | Identity no longer fits | “My wardrobe and routines belong to an earlier version of me.” | Crown Edit editorial | Pinterest + YouTube | Article → affiliate edit → email |
+| **Define** | Identity wants a current expression | “My wardrobe and routines belong to an earlier version of me.” | Crown Edit editorial | Pinterest + YouTube | Article → affiliate edit → email |
 | **Expand** | Appetite for more | “I am done waiting for someone else to be ready.” | Solo travel and strength guidance | YouTube + Pinterest | Article/video → partner offer → email |
-| **Connect** | Belonging and reinvention | “I want women who understand this stage without explaining it.” | Crown Years Letter | Facebook + referrals | Email → facilitated Crown Circles later |
+| **Connect** | Belonging and reinvention | “I want women who already understand this stage.” | Crown Years Letter | Facebook + referrals | Email → facilitated Crown Circles later |
 
-These routes are emotional entry points, not permanent personas. The same woman may use all four in one year.
+These routes are emotional entry points. The same woman may use all four in one year.
 
 ## Offer ladder
 
@@ -44,9 +44,9 @@ These routes are emotional entry points, not permanent personas. The same woman 
 
 ### Validate next
 
-1. **Before You File Money Dossier** — $29–$49; test only after the existing guide earns demand.
-2. **Crown Edit** — free shoppable newsletter; affiliate and sponsor revenue, no owned inventory.
-3. **Strength After 50 challenge** — $9 entry offer, only with a credible expert partner.
+1. **Before You File Money Dossier:** $29–$49; test only after the existing guide earns demand.
+2. **Crown Edit:** free shoppable newsletter funded through affiliate and sponsor revenue.
+3. **Strength After 50 challenge:** $9 entry offer, paired with a credible expert partner.
 
 ### Earn the right to launch later
 
@@ -54,10 +54,10 @@ These routes are emotional entry points, not permanent personas. The same woman 
 - Partner-operated travel with referral or revenue share before Crown Years operates a trip.
 - High-touch or high-ticket experiences only after an owned audience proves demand.
 
-### Do not build
+### Ideas that stay outside the roadmap
 
 - Generic planners or trackers as flagship products.
-- A broad fitness app without expert authority and audience proof.
+- A broad fitness app built ahead of expert authority and audience proof.
 - Owned beauty inventory.
 - An undifferentiated lifestyle-content mill.
 - Pages whose only destination is “coming soon.”
@@ -81,10 +81,10 @@ Facebook / Google     Pinterest / YouTube       Referral / direct
 ### Page rules
 
 - Every page has one primary next action.
-- The next action must already exist; no dead `#` links.
+- The next action already exists and every link resolves to a live destination.
 - Editorial pages lead to a tool, a relevant edit, or the Letter.
 - Tools lead to the next tool in the sequence, then to a validated paid system.
-- The homepage routes by present need, not by a taxonomy of everything Crown Years may eventually cover.
+- The homepage routes by present need and keeps the wider taxonomy in the background.
 - Email becomes the owned spine once Resend capture is activated.
 
 ## Homepage content brief
@@ -93,12 +93,12 @@ Facebook / Google     Pinterest / YouTube       Referral / direct
 | --- | --- |
 | **keyword** | Crown Years brand homepage; supporting intent: resources for women over 50 |
 | **core question** | What is Crown Years, is it for me, and where should I start? |
-| **AEO answer block** | Crown Years is an editorial and practical-resource brand for women 45–65 navigating consequential changes in money, identity, travel, strength, and connection. It does not treat midlife as one problem. The homepage asks what needs attention now, then routes the reader to a live next step: financial tools for gray divorce, a 30-piece wardrobe system, a first-solo-trip guide, or the Crown Years Letter. Free tools build trust. Focused products, affiliate edits, expert-led programs, and facilitated circles are introduced only after demand is visible. |
+| **AEO answer block** | Crown Years is an editorial and practical-resource brand for women 45–65 navigating consequential changes in money, identity, travel, strength, and connection. Midlife can open several doors at once. The homepage asks what needs attention now, then routes the reader to a live next step: financial tools for gray divorce, a 30-piece wardrobe system, a first-solo-trip guide, or the Crown Years Letter. Free tools build trust. Focused products, affiliate edits, expert-led programs, and facilitated circles follow visible demand. |
 | **H2 map** | Where should I start when everything changes at once? / What can I use now? / What should I read next? / What is the Crown Years Letter? |
 | **reader** | A capable, financially established woman aged 45–65 facing one specific decision and unwilling to be spoken down to |
-| **edge** | This page routes one woman through four distinct buying moments using live next steps; it never sends her into a broad lifestyle taxonomy or an empty coming-soon page. |
+| **edge** | This page routes one woman through four distinct buying moments using live next steps. Every path leads somewhere useful today. |
 | **CTA** | Choose the starting point that matches the decision in front of her |
-| **E-E-A-T signal** | Current AARP economic context, cited on-page; specific tools; no invented testimonials or unsupported statistics |
+| **E-E-A-T signal** | Current AARP economic context, cited on-page; specific tools; sourced evidence and genuine customer language |
 
 ## Supporting-page content briefs
 
@@ -108,7 +108,7 @@ Facebook / Google     Pinterest / YouTube       Referral / direct
 | --- | --- |
 | **keyword** | About Crown Years; supporting intent: midlife resources for women |
 | **core question** | What does Crown Years believe, and can I trust how it will speak to me? |
-| **AEO answer block** | Crown Years is an independent editorial and practical-resource brand for women navigating consequential midlife decisions. It treats competence as the default, replaces generic inspiration with specific next steps, separates evidence from editorial judgment, and does not reduce a reader to age, hormones, appearance, or relationship status. Its current live resources include a private gray-divorce financial toolkit and decision-led editorial on style and solo travel. |
+| **AEO answer block** | Crown Years is an independent editorial and practical-resource brand for women navigating consequential midlife decisions. It treats competence as the default, replaces generic inspiration with specific next steps, and separates evidence from editorial judgment. A reader arrives as a whole woman whose age, health, appearance, relationships, and work form part of a much larger life. Current resources include a private gray-divorce financial toolkit and decision-led editorial on style and solo travel. |
 | **H2 map** | Why does Crown Years exist? / What does Crown Years believe? / Where can I start? |
 | **reader** | A skeptical first-time reader checking whether the brand is credible or merely flattering |
 | **edge** | The page publishes an explicit editorial standard and replaces unsupported demographic claims with one current, cited economic fact. |
@@ -121,12 +121,27 @@ Facebook / Google     Pinterest / YouTube       Referral / direct
 | --- | --- |
 | **keyword** | Free midlife resources for women; supporting intent: gray-divorce tools, capsule wardrobe over 50, solo travel women over 50 |
 | **core question** | Which Crown Years resource can help with the decision in front of me now? |
-| **AEO answer block** | Crown Years currently offers four private gray-divorce tools, a complete financial guide, a 30-piece capsule-wardrobe system, and a ranked solo-travel guide. The resource page separates what is live from what is merely being validated, so readers are never sent to dead coming-soon pages. The financial tools run without an account and do not store user entries. |
+| **AEO answer block** | Crown Years currently offers four private gray-divorce tools, a complete financial guide, a 30-piece capsule-wardrobe system, and a ranked solo-travel guide. The resource page separates live resources from ideas in validation. Every link opens something useful today. The financial tools open instantly and keep entries in the reader's browser. |
 | **H2 map** | What can I use now for gray divorce? / What can I read for identity or expansion? / What is Crown Years validating next? |
-| **reader** | A returning or search-driven reader who wants an actionable resource, not an overview of brand categories |
-| **edge** | Every destination is live; future concepts are disclosed as a validation queue rather than disguised as clickable products. |
+| **reader** | A returning or search-driven reader who wants one useful action for the decision in front of her |
+| **edge** | Every destination is live; future concepts sit in a clearly labeled validation queue. |
 | **CTA** | Open the resource matched to the present decision |
 | **E-E-A-T signal** | Direct links to individual tools, accurate privacy language, and clear live-versus-validation status |
+
+## Sitewide affirmative copy sweep brief
+
+| Field | Value |
+| --- | --- |
+| **keyword** | Existing keyword and search intent for each page |
+| **core question** | Existing page question; this sweep improves expression and preserves purpose |
+| **AEO answer block** | Existing answer-first structure, rewritten in affirmative language where needed |
+| **H2 map** | Existing article and tool structure |
+| **reader** | A capable woman aged 45–65 who values taste, directness, privacy, and useful detail |
+| **edge** | This site speaks to her appetite and agency through specific scenes and usable systems. Each sentence gives her the strong frame first. |
+| **CTA** | Existing live next action on each page |
+| **E-E-A-T signal** | Existing sources, transparent tool limits, explicit editorial standards, and clearly labeled validation ideas |
+
+The sweep preserves facts, legal caution, tool behavior, search intent, and page architecture. It removes decorative em dashes, negative contrast formulas, invented testimonial language, and generic empowerment copy.
 
 ## Voice profile
 
@@ -150,13 +165,13 @@ Compression
 - Restrained on marketing pages; specific and explanatory inside tools and decision guides.
 
 Capitalization
-- Conventional sentence case. Small uppercase labels may orient the reader but never carry the message.
+- Conventional sentence case. Small uppercase labels orient the reader while the body copy carries the message.
 
 Parentheticals
 - Rare. Use only to qualify a number or prevent a costly misunderstanding.
 
 Question Use
-- Rare and direct. Questions route the reader; they never manufacture curiosity.
+- Rare and direct. Questions route the reader toward a useful decision.
 
 Claim Style
 - State the conclusion, show the mechanism, cite the evidence. Distinguish fact from editorial judgment.
@@ -175,12 +190,22 @@ Banned Moves
 - Repeating “permission” until it becomes a substitute for substance.
 - Invented testimonials, vague superlatives, and unsupported market statistics.
 - Treating menopause, gray hair, divorce, or age as her entire identity.
+- Em dashes in public copy. Use a full stop, colon, comma, or a shorter sentence.
+- Contrast formulas that lead with the rejected frame. Lead with the desired picture.
+- Copy that names the weak frame before the strong one. Give the reader the strong frame first.
+
+Affirmative Copy Rule
+- Write toward appetite, agency, taste, relief, and possibility.
+- Begin with what she gains, sees, feels, chooses, or can do next.
+- Use concrete details with texture: the file on the lawyer's desk, the coat that earns its place, the table for one in Lisbon.
+- Keep one idea per sentence. Let rhythm come from sentence length and image. Use functional punctuation.
+- Express safeguards as positive facts: “Entries stay in your browser” and “A lawyer can advise on your situation.”
 
 CTA Rules
 - One primary ask per block.
-- Name the outcome: “Open the financial tools,” not “Learn more.”
-- Never route to a dead page or imply an email was saved when it was not.
-- Paid CTAs follow demonstrated value; they do not interrupt the first useful answer.
+- Name the outcome. “Open the financial tools” carries more meaning than “Learn more.”
+- Route every reader to a live page and describe email capture exactly as it works.
+- Paid CTAs follow demonstrated value and arrive after the first useful answer.
 
 Channel Notes
 - Facebook: direct, validating, specific to an urgent moment.
@@ -201,7 +226,7 @@ Channel Notes
 
 ## Measurement gates
 
-- Do not call Crown Years reactivated because the design improved.
+- Treat commercial reactivation as the result of a successful demand test.
 - The first commercial validation remains a bounded traffic test to the gray-divorce funnel.
 - Continue the paid dossier only with at least 20% qualified email capture once capture is live and at least three paid/pre-order signals from the initial test.
 - Introduce membership only after the Letter shows recurring opens, replies, and demand for facilitated connection.

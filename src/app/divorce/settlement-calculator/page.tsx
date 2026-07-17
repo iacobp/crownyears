@@ -76,9 +76,9 @@ export default function SettlementCalculator() {
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
       <h1 className="text-3xl font-bold mb-2">Settlement Calculator</h1>
       <p className="text-muted mb-8">
-        Estimate how assets and debts might be divided. This is a starting point
-        for understanding — not legal advice. Your state&apos;s laws and your
-        specific circumstances will determine the actual split.
+        Estimate how assets and debts might be divided. This calculator offers
+        a general planning figure. Your state&apos;s laws and your circumstances
+        determine the actual split, and a lawyer can advise on your situation.
       </p>
 
       {/* Assets */}
@@ -187,9 +187,9 @@ export default function SettlementCalculator() {
       <div className="mb-10">
         <h2 className="text-lg font-semibold mb-4">Division Split</h2>
         <p className="text-sm text-muted mb-3">
-          Most states use &quot;equitable distribution&quot; (fair, not necessarily 50/50).
-          Community property states default to 50/50. Adjust the slider to model
-          different scenarios.
+          Courts in equitable distribution states decide a fair split using
+          state-specific factors. Community property states default to 50/50.
+          Adjust the slider to model different scenarios.
         </p>
         <div className="flex items-center gap-4">
           <span className="text-sm text-muted w-16">You: {splitPercent}%</span>
@@ -249,18 +249,18 @@ export default function SettlementCalculator() {
           </li>
           <li>
             Retirement accounts may require a QDRO (Qualified Domestic
-            Relations Order) to divide — ask your lawyer.
+            Relations Order) to divide. Ask your lawyer who prepares it.
           </li>
           <li>
-            Hidden assets are common in gray divorce. If numbers don&apos;t
-            add up, your lawyer can request financial discovery.
+            Hidden assets are common in gray divorce. Your lawyer can request
+            financial discovery when the numbers raise questions.
           </li>
           <li>
             Use our{" "}
             <a href="/divorce/asset-checklist" className="text-accent underline">
               Asset Checklist
             </a>{" "}
-            to make sure you haven&apos;t missed anything.
+            to complete your marital-estate inventory.
           </li>
         </ul>
       </div>

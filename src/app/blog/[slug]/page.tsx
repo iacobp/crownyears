@@ -27,7 +27,7 @@ export async function generateMetadata({
     const post = await getPost(slug);
     const m = post.metadata;
     return {
-      title: `${m.title} — Crown Years`,
+      title: `${m.title} | Crown Years`,
       description: m.description,
       openGraph: {
         title: m.title,
@@ -44,7 +44,7 @@ export async function generateMetadata({
       },
     };
   } catch {
-    return { title: "Post Not Found — Crown Years" };
+    return { title: "Article Unavailable | Crown Years" };
   }
 }
 
@@ -99,7 +99,7 @@ export default async function BlogPost({
 
       <TableOfContents />
 
-      {/* Article header — editorial, centered, generous */}
+      {/* Article header: editorial, centered, generous */}
       <header className="max-w-3xl mx-auto px-6 sm:px-8 pt-16 sm:pt-24 pb-10 text-center">
         <Reveal>
           <Link
@@ -130,7 +130,7 @@ export default async function BlogPost({
         </Reveal>
       </header>
 
-      {/* Featured image — full-bleed with contained max-width */}
+      {/* Featured image: full-bleed with contained max-width */}
       {postMeta.image && (
         <Reveal>
           <div className="max-w-5xl mx-auto px-6 sm:px-8 mb-16 featured-image">

@@ -64,7 +64,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Article images — smooth fade-in */
+/* Article images: smooth fade-in */
 .article-body img {
   opacity: 0;
   animation: imageFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;

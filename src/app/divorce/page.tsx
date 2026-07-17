@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Gray Divorce Financial Tools — Crown Years",
+  title: "Gray Divorce Financial Tools | Crown Years",
   description:
     "Free interactive tools for women navigating divorce after 50. Asset checklist, settlement calculator, lawyer question scripts, and post-divorce budget planner.",
 };
@@ -54,16 +54,16 @@ export default function DivorceLanding() {
           </Reveal>
           <Reveal delay={0.2}>
             <p className="text-lg text-muted max-w-xl mx-auto mb-10 leading-relaxed">
-              91% of divorcing midlife women never seek financial advice.
+              Only 9% of divorcing midlife women receive financial advice.
               Women&apos;s standard of living drops 45% post-divorce. These tools
               exist to close that gap.
             </p>
           </Reveal>
           <Reveal delay={0.3}>
             <div className="flex flex-col sm:flex-row gap-8 justify-center text-center text-xs text-muted">
-              <span>100% Free</span>
-              <span>Nothing Stored</span>
-              <span>No Account Needed</span>
+              <span>Free to Use</span>
+              <span>Browser Private</span>
+              <span>Instant Access</span>
             </div>
           </Reveal>
         </div>

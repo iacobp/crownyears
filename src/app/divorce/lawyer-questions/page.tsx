@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PrintButton from "@/components/PrintButton";
 
 export const metadata: Metadata = {
-  title: "Questions for Your Lawyer — GrayDivorceGuide",
+  title: "Questions for Your Lawyer | GrayDivorceGuide",
   description:
     "Printable question scripts organized by topic for your divorce attorney meetings.",
 };
@@ -21,22 +21,22 @@ const sections: QuestionSection[] = [
     questions: [
       "What percentage of your practice focuses on divorce cases for people over 45?",
       "Are you familiar with QDROs and dividing retirement accounts?",
-      "What is your fee structure — hourly, retainer, flat fee? What's a realistic total cost estimate?",
+      "What is your fee structure: hourly, retainer, or flat fee? What is a realistic total cost estimate?",
       "How long does a gray divorce typically take in our state/county?",
       "Do you recommend mediation, collaborative divorce, or litigation for my situation?",
-      "Who else might I need on my team — financial advisor, forensic accountant, therapist?",
-      "What should I absolutely NOT do right now that could hurt my case?",
+      "Who else might I need on my team: financial advisor, forensic accountant, or therapist?",
+      "Which actions could hurt my case right now?",
       "How will we communicate, and how quickly can I expect responses?",
     ],
   },
   {
     title: "Assets & Property Division",
     context:
-      "Make sure nothing is hidden or undervalued. These questions protect your financial interests.",
+      "Confirm every asset and its current value. These questions protect your financial interests.",
     questions: [
       "Is our state a community property or equitable distribution state? What does that mean for me?",
       "How do we determine the current value of the marital home? Do we need an appraisal?",
-      "My spouse owns a business — how do we determine its value? Do we need a forensic accountant?",
+      "My spouse owns a business. How do we determine its value? Do we need a forensic accountant?",
       "What happens to assets I brought into the marriage or inherited during it?",
       "How are stock options, RSUs, and deferred compensation handled?",
       "I suspect my spouse may be hiding assets. What can we do?",
@@ -48,7 +48,7 @@ const sections: QuestionSection[] = [
   {
     title: "Retirement & Social Security",
     context:
-      "For women over 45, retirement accounts are often the largest marital asset. Don't leave money on the table.",
+      "For women over 45, retirement accounts are often the largest marital asset. Give each account a current value and a division plan.",
     questions: [
       "Am I entitled to a portion of my spouse's 401(k), IRA, or pension?",
       "What is a QDRO, and when do we need one? Who prepares it?",
@@ -66,12 +66,12 @@ const sections: QuestionSection[] = [
     questions: [
       "Am I likely to receive spousal support? For how long?",
       "How is the amount of alimony calculated in our state?",
-      "What factors does the court consider — length of marriage, age, health, earning capacity?",
+      "Which factors does the court consider, including length of marriage, age, health, and earning capacity?",
       "Is there a difference between temporary and permanent alimony?",
       "Can alimony be modified later if circumstances change?",
       "What happens to alimony if my ex-spouse retires?",
       "Should alimony be structured as a lump sum or monthly payments? What are the tax differences?",
-      "If I haven't worked in years, will the court expect me to find a job? How soon?",
+      "I have spent years outside the workforce. What employment timeline might the court expect?",
     ],
   },
   {
@@ -80,7 +80,7 @@ const sections: QuestionSection[] = [
       "Divorce has major tax consequences that are easy to overlook. Ask these before you agree to any settlement terms.",
     questions: [
       "What are the tax implications of selling the marital home?",
-      "How should we file taxes during the divorce — jointly or separately?",
+      "How should we file taxes during the divorce: jointly or separately?",
       "Who claims dependents if we have adult children still in college?",
       "Is alimony taxable income for me or deductible for my spouse?",
       "What are the capital gains implications of dividing investment accounts?",
@@ -142,13 +142,13 @@ export default function LawyerQuestions() {
             <a href="/divorce/asset-checklist" className="text-accent underline">
               Asset Checklist
             </a>{" "}
-            progress — it shows your lawyer what you&apos;ve found and what&apos;s
-            missing
+            progress. It shows your lawyer what you&apos;ve found and what still
+            needs attention.
           </li>
           <li>Take notes or ask if you can record the meeting</li>
           <li>
-            Don&apos;t be afraid to say &quot;I don&apos;t understand&quot; — a
-            good lawyer will explain in plain language
+            Say &quot;Please explain that in plain language&quot; whenever an
+            answer feels unclear. A good lawyer will make it understandable.
           </li>
           <li>
             If something feels wrong or unfair in their answer, get a second

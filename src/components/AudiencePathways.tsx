@@ -5,7 +5,7 @@ const pathways = [
   {
     number: "01",
     mode: "Protect",
-    title: "My money needs my full attention.",
+    title: "I want every number in front of me.",
     description:
       "Start with the numbers, documents, and questions that protect your options before a gray-divorce decision becomes irreversible.",
     href: "/divorce",
@@ -16,7 +16,7 @@ const pathways = [
   {
     number: "02",
     mode: "Define",
-    title: "My wardrobe belongs to an earlier version of me.",
+    title: "I want a wardrobe that feels like me now.",
     description:
       "Use a 30-piece system to make getting dressed simpler, sharper, and entirely your own.",
     href: "/blog/capsule-wardrobe-over-50",
@@ -27,7 +27,7 @@ const pathways = [
   {
     number: "03",
     mode: "Expand",
-    title: "I am done waiting for someone else to be ready.",
+    title: "The trip is mine to choose.",
     description:
       "Choose a first solo destination, understand the tradeoffs, and make the trip small enough to book.",
     href: "/blog/solo-travel-women-over-50",

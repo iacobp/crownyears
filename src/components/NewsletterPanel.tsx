@@ -31,8 +31,8 @@ export default function NewsletterPanel({
             One decision. One useful tool. One thing worth considering.
           </h2>
           <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted">
-            A weekly note for women making consequential choices without the
-            performance, panic, or generic inspiration.
+            A weekly note for women who prefer clear choices, useful detail,
+            and recommendations that earn their place.
           </p>
         </div>
         <div className={compact ? "mt-7" : "lg:col-span-5"}>

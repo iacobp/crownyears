@@ -4,7 +4,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "About — Crown Years",
+  title: "About | Crown Years",
   description:
     "Why Crown Years exists: evidence-led tools and editorial for the consequential decisions of midlife.",
 };
@@ -14,7 +14,7 @@ const principles = [
     number: "01",
     title: "Competence is the default.",
     description:
-      "We explain the tradeoffs without flattening them, and never mistake clarity for condescension.",
+      "We explain the tradeoffs clearly and preserve their complexity.",
   },
   {
     number: "02",
@@ -26,13 +26,13 @@ const principles = [
     number: "03",
     title: "Evidence and judgment stay distinct.",
     description:
-      "Facts are sourced. Recommendations are explained. Commercial relationships never rewrite the underlying conclusion.",
+      "Facts carry sources. Recommendations carry reasons. Commercial relationships leave the underlying conclusion intact.",
   },
   {
     number: "04",
-    title: "A life stage is not an identity.",
+    title: "A whole life shapes every decision.",
     description:
-      "Age, hormones, appearance, marriage, and work may shape the decision. None of them gets to define the woman making it.",
+      "Age, hormones, appearance, marriage, and work belong to a much larger story: hers.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function About() {
               About Crown Years
             </p>
             <h1 className="font-serif text-5xl leading-[1.02] tracking-[-0.04em] text-deep text-balance sm:text-6xl">
-              Midlife deserves better than one-dimensional advice.
+              Midlife deserves advice with depth, taste, and a useful next move.
             </h1>
           </Reveal>
           <Reveal delay={0.08} className="lg:col-span-4 lg:col-start-9">
@@ -90,9 +90,9 @@ export default function About() {
                 with the specific decision, then shows the next useful move.
               </p>
               <p>
-                Adults 50+ accounted for $12.5 trillion—43% of U.S. economic
-                activity—in 2024. The audience does not need to be convinced of
-                its own value. It needs to be served with more accuracy and
+                Adults 50+ accounted for $12.5 trillion, or 43% of U.S.
+                economic activity, in 2024. This audience already knows its
+                value. Crown Years meets that power with accuracy and
                 imagination.
               </p>
               <a
@@ -154,7 +154,7 @@ export default function About() {
             <span aria-hidden="true">&rarr;</span>
           </Link>
           <p className="mt-5 text-xs leading-relaxed text-muted">
-            Or <Link href="/#letter" className="underline decoration-border underline-offset-4 hover:text-deep">preview the Crown Years Letter</Link> before email capture opens.
+            You can also <Link href="/#letter" className="underline decoration-border underline-offset-4 hover:text-deep">preview the Crown Years Letter</Link> and see what each edition will bring.
           </p>
         </Reveal>
       </section>

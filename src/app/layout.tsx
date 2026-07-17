@@ -19,11 +19,11 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://crownyears.vercel.app"),
-  title: "Crown Years — Clear Next Moves for Midlife",
+  title: "Crown Years | Clear Next Moves for Midlife",
   description:
-    "Evidence-led tools and editorial for women navigating the consequential decisions of midlife — money, identity, work, health, travel, and connection.",
+    "Evidence-led tools and editorial for women navigating the consequential decisions of midlife across money, identity, work, health, travel, and connection.",
   openGraph: {
-    title: "Crown Years — Clear Next Moves for Midlife",
+    title: "Crown Years | Clear Next Moves for Midlife",
     description:
       "Practical tools and thoughtful editorial for the consequential decisions of midlife.",
     type: "website",

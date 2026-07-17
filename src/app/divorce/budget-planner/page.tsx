@@ -138,9 +138,8 @@ export default function BudgetPlanner() {
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
       <h1 className="text-3xl font-bold mb-2">Post-Divorce Budget Planner</h1>
       <p className="text-muted mb-8">
-        Map out your monthly expenses on a single income. This helps you
-        understand what you truly need — and what to negotiate for in your
-        settlement.
+        Map your monthly expenses on a single income. See the figure your next
+        life requires and bring it into the settlement conversation.
       </p>
 
       {/* Income Section */}
@@ -250,20 +249,20 @@ export default function BudgetPlanner() {
         <h3 className="font-semibold mb-2">How to use this budget</h3>
         <ul className="text-sm text-muted space-y-2 list-disc list-inside">
           <li>
-            Print this and bring it to your lawyer — it demonstrates your
-            genuine financial needs
+            Print this and bring it to your lawyer. It shows your monthly
+            financial needs in one clear view.
           </li>
           <li>
             If you show a shortfall, it strengthens your case for spousal
             support
           </li>
           <li>
-            Don&apos;t forget to include health insurance — if you&apos;re on
-            your spouse&apos;s plan, you&apos;ll need your own
+            Include the cost of an individual health-insurance plan when your
+            current coverage comes through your spouse.
           </li>
           <li>
-            Budget for therapy — divorce is emotionally expensive too, and it&apos;s
-            money well spent
+            Give therapy its own line. Emotional support belongs in the real
+            cost of this transition.
           </li>
           <li>
             Run the{" "}

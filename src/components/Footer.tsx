@@ -12,8 +12,9 @@ export default function Footer() {
               <span className="font-serif text-xl text-deep">Crown Years</span>
             </div>
             <p className="text-sm text-muted max-w-sm leading-relaxed">
-              Clear next moves for the consequential decisions of midlife —
-              practical tools, thoughtful editorial, and no condescension.
+              Clear next moves for the consequential decisions of midlife.
+              Practical tools and thoughtful editorial for a woman with places
+              to go and decisions to make.
             </p>
           </div>
           <div>

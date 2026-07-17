@@ -5,7 +5,7 @@ import { getAllPosts, formatDate } from "@/lib/blog";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "The Journal — Crown Years",
+  title: "The Journal | Crown Years",
   description:
     "Insights, guides, and tools for women 45+ navigating finances, career, health, style, and reinvention.",
 };
@@ -25,8 +25,8 @@ export default async function BlogIndex() {
             Insights for your era.
           </h1>
           <p className="text-muted max-w-md text-sm leading-relaxed">
-            Evidence, not opinions. Tools, not platitudes. Every article is built
-            to move you forward.
+            Evidence with sources. Tools you can use. Every article ends with a
+            clearer decision and a useful next move.
           </p>
         </div>
       </Reveal>
@@ -35,7 +35,7 @@ export default async function BlogIndex() {
         <p className="text-muted">First articles launching soon.</p>
       ) : (
         <>
-          {/* Featured post — large, with image */}
+          {/* Featured post: large, with image */}
           {featured && (
             <Reveal>
               <Link
@@ -73,7 +73,7 @@ export default async function BlogIndex() {
             </Reveal>
           )}
 
-          {/* Remaining posts — compact with thumbnails */}
+          {/* Remaining posts: compact with thumbnails */}
           {rest.length > 0 && (
             <div className="border-t border-border pt-12 space-y-0">
               {rest.map((post, i) => (

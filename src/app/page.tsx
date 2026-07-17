@@ -34,7 +34,7 @@ const toolSteps = [
 const editorial = [
   {
     label: "The Crown Edit",
-    title: "The 30 pieces that make the rest of the wardrobe unnecessary",
+    title: "Thirty pieces that earn their place every morning",
     description:
       "A French-informed capsule system built around fit, material, and fewer decisions.",
     image: "/blog/capsule-wardrobe-flatlay.jpg",
@@ -62,7 +62,7 @@ export default function Home() {
           <div className="lg:col-span-7 lg:pr-12">
             <Reveal>
               <p className="mb-7 text-[10px] uppercase tracking-[0.34em] text-gold-dark">
-                For women 45–65, on their own terms
+                For women 45 to 65, on their own terms
               </p>
             </Reveal>
             <Reveal delay={0.06}>
@@ -73,8 +73,8 @@ export default function Home() {
             <Reveal delay={0.12}>
               <p className="mt-8 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
                 Crown Years turns consequential midlife decisions into clear
-                next moves—in money, identity, travel, strength, and connection.
-                Start with the choice asking for your attention now.
+                next moves across money, identity, travel, strength, and
+                connection. Start with the choice asking for your attention now.
               </p>
             </Reveal>
             <Reveal delay={0.18}>
@@ -109,7 +109,7 @@ export default function Home() {
                 />
               </div>
               <figcaption className="absolute -bottom-6 left-5 max-w-[16rem] border border-border bg-card px-5 py-4 text-xs leading-relaxed text-muted shadow-[0_16px_40px_-24px_rgba(80,61,45,0.35)] sm:left-8">
-                Not a restart. A change in authorship.
+                A change in authorship.
               </figcaption>
             </figure>
           </Reveal>
@@ -121,8 +121,8 @@ export default function Home() {
           <p className="font-mono text-2xl text-gold-dark tabular-nums">$12.5T</p>
           <p className="max-w-2xl text-sm leading-relaxed text-muted">
             Adults 50+ accounted for 43% of U.S. economic activity in 2024.
-            The opportunity is not convincing this audience to spend. It is
-            serving the decision in front of her better.
+            This audience already moves markets. The opportunity lies in
+            serving the decision in front of her with greater care.
           </p>
           <a
             href="https://www.aarp.org/pri/topics/work-finances-retirement/economics-aging/longevity-economy-outlook/"
@@ -143,7 +143,7 @@ export default function Home() {
                 Start where you are
               </p>
               <h2 className="font-serif text-4xl leading-[1.08] text-deep text-balance sm:text-5xl">
-                Midlife is not one problem. It is several doors opening at once.
+                Midlife opens several doors at once.
               </h2>
             </Reveal>
             <Reveal delay={0.08} className="lg:col-span-4 lg:col-start-9">
@@ -168,8 +168,8 @@ export default function Home() {
             </h2>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-cream/65">
               Four private tools turn a complicated financial transition into a
-              sequence you can work through. Nothing is stored. No account is
-              required.
+              sequence you can work through. They open instantly, and your
+              entries stay in your browser.
             </p>
             <Link
               href="/divorce"
@@ -265,9 +265,9 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.06} className="lg:col-span-7 lg:col-start-6">
             <p className="font-serif text-3xl leading-[1.35] text-deep text-balance sm:text-4xl">
-              You do not need to be reduced to your age, your hormones, your
-              marriage, or your hair. You need accurate information, considered
-              options, and room to decide.
+              You arrive here as a whole woman. Your age, hormones, marriage,
+              and hair form part of the story. Accurate information, considered
+              options, and room to decide carry it forward.
             </p>
             <Link
               href="/about"
