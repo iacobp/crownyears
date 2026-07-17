@@ -18,13 +18,14 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Crown Years — This Is Your Era",
+  metadataBase: new URL("https://crownyears.vercel.app"),
+  title: "Crown Years — Clear Next Moves for Midlife",
   description:
-    "The destination for women 45+ who are done being invisible. Free tools, guides, and resources for finances, wellness, career, style, and the life you actually want.",
+    "Evidence-led tools and editorial for women navigating the consequential decisions of midlife — money, identity, work, health, travel, and connection.",
   openGraph: {
-    title: "Crown Years — This Is Your Era",
+    title: "Crown Years — Clear Next Moves for Midlife",
     description:
-      "You're not starting over. You're starting to choose. Free tools and resources for midlife women taking control.",
+      "Practical tools and thoughtful editorial for the consequential decisions of midlife.",
     type: "website",
   },
 };
@@ -40,8 +41,16 @@ export default function RootLayout({
       className={`${geistSans.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <a
+          href="#main-content"
+          className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-deep px-5 py-3 text-sm text-cream transition-transform focus:translate-y-0"
+        >
+          Skip to content
+        </a>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

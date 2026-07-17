@@ -12,26 +12,34 @@ export default function TableOfContents() {
   const [activeId, setActiveId] = useState("");
 
   useEffect(() => {
-    const els = document.querySelectorAll("article h2[id]");
-    const items: Heading[] = Array.from(els).map((el) => ({
-      id: el.id,
-      text: el.textContent || "",
-    }));
-    setHeadings(items);
+    let observer: IntersectionObserver | undefined;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            setActiveId(entry.target.id);
+    const frame = requestAnimationFrame(() => {
+      const els = document.querySelectorAll("article h2[id]");
+      const items: Heading[] = Array.from(els).map((el) => ({
+        id: el.id,
+        text: el.textContent || "",
+      }));
+      setHeadings(items);
+
+      observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              setActiveId(entry.target.id);
+            }
           }
-        }
-      },
-      { rootMargin: "-80px 0px -60% 0px" }
-    );
+        },
+        { rootMargin: "-80px 0px -60% 0px" }
+      );
 
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+      els.forEach((el) => observer?.observe(el));
+    });
+
+    return () => {
+      cancelAnimationFrame(frame);
+      observer?.disconnect();
+    };
   }, []);
 
   if (headings.length < 3) return null;

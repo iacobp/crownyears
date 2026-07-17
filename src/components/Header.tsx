@@ -23,7 +23,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         <div className="flex items-center justify-between h-[72px]">
           <Link href="/" className="flex items-center gap-2.5 group">
-            <CrownIcon className="w-5 h-5 text-gold transition-transform duration-300 group-hover:scale-110" />
+            <CrownIcon className="w-5 h-5 text-gold transition-transform duration-300 ease-out group-hover:scale-110" />
             <span className="font-serif text-xl tracking-tight text-deep">
               Crown Years
             </span>
@@ -43,18 +43,20 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <a
-              href="#newsletter"
-              className="text-[13px] bg-deep text-cream px-6 py-2.5 rounded-full hover:bg-gold transition-colors duration-300 tracking-wide"
+            <Link
+              href="/#letter"
+              className="rounded-full bg-deep px-6 py-2.5 text-[13px] tracking-wide text-cream transition-[background-color,transform] duration-200 ease-out hover:bg-gold active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
             >
-              Join the Movement
-            </a>
+              Get the Letter
+            </Link>
           </nav>
 
           <button
-            className="md:hidden p-2 text-muted"
-            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden rounded-lg p-2 text-muted transition-colors hover:bg-cream hover:text-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+            onClick={() => setMenuOpen((open) => !open)}
             aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {menuOpen ? (
@@ -67,7 +69,10 @@ export default function Header() {
         </div>
 
         {menuOpen && (
-          <nav className="md:hidden pb-6 space-y-3 border-t border-border pt-4">
+          <nav
+            id="mobile-navigation"
+            className="md:hidden pb-6 space-y-3 border-t border-border pt-4"
+          >
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -80,6 +85,13 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+            <Link
+              href="/#letter"
+              className="mt-4 block rounded-full bg-deep px-5 py-3 text-center text-sm tracking-wide text-cream transition-colors hover:bg-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+              onClick={() => setMenuOpen(false)}
+            >
+              Get the Letter
+            </Link>
           </nav>
         )}
       </div>

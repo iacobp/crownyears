@@ -1,5 +1,10 @@
 # Crown Years — Ecosystem Strategy
 
+> **Historical planning document (April 2026).** The current positioning,
+> audience routes, offer gates, voice profile, and funnel rules live in
+> `BRAND-FUNNEL-SYSTEM.md` (updated 2026-07-17). Use this file for the original
+> research inventory, not as an instruction to build every proposed vertical.
+
 ## Architecture
 
 **Mother site:** crownyears.com (or crownyears.vercel.app for now)

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
 
 interface RevealProps {
@@ -11,11 +11,11 @@ interface RevealProps {
 }
 
 const directionMap = {
-  up: { y: 24, x: 0 },
-  down: { y: -24, x: 0 },
-  left: { x: 24, y: 0 },
-  right: { x: -24, y: 0 },
-  none: { x: 0, y: 0 },
+  up: "translate3d(0, 24px, 0)",
+  down: "translate3d(0, -24px, 0)",
+  left: "translate3d(24px, 0, 0)",
+  right: "translate3d(-24px, 0, 0)",
+  none: "translate3d(0, 0, 0)",
 };
 
 export default function Reveal({
@@ -24,13 +24,20 @@ export default function Reveal({
   delay = 0,
   direction = "up",
 }: RevealProps) {
+  const shouldReduceMotion = useReducedMotion();
   const offset = directionMap[direction];
 
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, ...offset }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      initial={
+        shouldReduceMotion ? false : { opacity: 0, transform: offset }
+      }
+      whileInView={
+        shouldReduceMotion
+          ? undefined
+          : { opacity: 1, transform: "translate3d(0, 0, 0)" }
+      }
       viewport={{ once: true, margin: "-40px" }}
       transition={{
         type: "spring",

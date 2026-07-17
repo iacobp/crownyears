@@ -1,163 +1,216 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import NewsletterPanel from "@/components/NewsletterPanel";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Free Resources — Crown Years",
+  title: "Resources — Crown Years",
   description:
-    "Free tools, guides, and resources for women 45+. Finances, wellness, career, style, travel, and community.",
+    "Live financial tools and decision-led guides for gray divorce, personal style, and solo travel in midlife.",
 };
 
-interface Resource {
-  title: string;
-  description: string;
-  href: string;
-  category: string;
-  status: "live" | "coming-soon";
-  external?: boolean;
-}
-
-const resources: Resource[] = [
+const financialTools = [
   {
-    title: "Gray Divorce Financial Guide",
-    description:
-      "Asset checklist, settlement calculator, lawyer question scripts, and post-divorce budget planner. Interactive, private, free.",
-    href: "/divorce",
-    category: "Money & Independence",
-    status: "live",
-    external: false,
+    number: "01",
+    title: "Asset checklist",
+    description: "Inventory accounts, property, debts, documents, and overlooked financial details.",
+    href: "/divorce/asset-checklist",
   },
   {
-    title: "The Money After Divorce Roadmap",
-    description: "12-month financial rebuilding plan. Credit, budgeting, investing basics, and emergency fund targets.",
-    href: "#",
-    category: "Money & Independence",
-    status: "coming-soon",
+    number: "02",
+    title: "Settlement calculator",
+    description: "Compare different asset divisions before they become a permanent agreement.",
+    href: "/divorce/settlement-calculator",
   },
   {
-    title: "Perimenopause Advocacy Kit",
-    description: "Evidence-based symptom documentation and talking points for your doctor. Stop being dismissed.",
-    href: "#",
-    category: "Health & Vitality",
-    status: "coming-soon",
+    number: "03",
+    title: "Lawyer questions",
+    description: "Bring 48 organized prompts into the first legal conversations.",
+    href: "/divorce/lawyer-questions",
   },
   {
-    title: "Midlife Fitness Blueprint",
-    description: "Pilates, walking, strength training — a realistic plan for bodies that are changing, not declining.",
-    href: "#",
-    category: "Health & Vitality",
-    status: "coming-soon",
-  },
-  {
-    title: "Reinvention Planner",
-    description: "Guided workbook for your second act. Skills audit, purpose mapping, business viability checker.",
-    href: "#",
-    category: "Career & Purpose",
-    status: "coming-soon",
-  },
-  {
-    title: "Capsule Wardrobe Builder",
-    description: "30-piece wardrobe system. French style meets real life. Works for every body, every budget.",
-    href: "#",
-    category: "Style & Identity",
-    status: "coming-soon",
-  },
-  {
-    title: "Solo Travel Starter Kit",
-    description: "Planning guide, packing lists, safety protocols, and 20 destinations ranked for solo women 45+.",
-    href: "#",
-    category: "Travel & Adventure",
-    status: "coming-soon",
-  },
-  {
-    title: "The Crown Circle — Local Meetup Guide",
-    description: "How to start a real-life group of midlife women in your area. Templates, conversation starters, format ideas.",
-    href: "#",
-    category: "Connection & Community",
-    status: "coming-soon",
+    number: "04",
+    title: "Post-divorce budget",
+    description: "Model monthly life after the settlement, while there is still room to decide.",
+    href: "/divorce/budget-planner",
   },
 ];
 
-const categories = [
-  "Money & Independence",
-  "Health & Vitality",
-  "Career & Purpose",
-  "Style & Identity",
-  "Travel & Adventure",
-  "Connection & Community",
+const editorialRoutes = [
+  {
+    mode: "Define",
+    title: "Build a 30-piece wardrobe system",
+    description:
+      "A practical capsule method organized around fit, material, and the life you actually dress for.",
+    href: "/blog/capsule-wardrobe-over-50",
+    action: "Open the wardrobe guide",
+  },
+  {
+    mode: "Expand",
+    title: "Choose a first solo destination",
+    description:
+      "Fifteen destinations ordered by ease, energy, and how ready you feel—not by someone else’s bucket list.",
+    href: "/blog/solo-travel-women-over-50",
+    action: "Open the travel guide",
+  },
+];
+
+const validationQueue = [
+  {
+    title: "Before You File Money Dossier",
+    description: "A paid working system will be tested only after the free gray-divorce tools show real demand.",
+  },
+  {
+    title: "The Crown Edit",
+    description: "A shoppable editorial letter built around fewer, better recommendations—without owned inventory.",
+  },
+  {
+    title: "Strength After 50",
+    description: "A bounded challenge considered only with a credible expert partner and an audience signal first.",
+  },
 ];
 
 export default function Resources() {
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
-      <div className="text-center mb-12">
-        <p className="text-xs uppercase tracking-[0.3em] text-gold mb-3">
-          Free Resources
-        </p>
-        <h1 className="text-3xl sm:text-4xl font-bold text-deep mb-4">
-          Tools that move you forward
-        </h1>
-        <p className="text-muted max-w-lg mx-auto text-sm">
-          Every resource is free, private, and designed for action. No sign-up
-          required. Your data stays in your browser.
-        </p>
-      </div>
+    <>
+      <section className="border-b border-border">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-20 sm:px-8 sm:py-28 lg:grid-cols-12 lg:items-end">
+          <Reveal className="lg:col-span-7">
+            <p className="mb-5 text-[10px] uppercase tracking-[0.34em] text-gold-dark">
+              Resources
+            </p>
+            <h1 className="font-serif text-5xl leading-[1.02] tracking-[-0.04em] text-deep text-balance sm:text-6xl">
+              Start with the decision already asking for your attention.
+            </h1>
+          </Reveal>
+          <Reveal delay={0.08} className="lg:col-span-4 lg:col-start-9">
+            <p className="text-sm leading-relaxed text-muted">
+              Everything linked below is live. Future ideas are named honestly
+              as things being validated—not dressed up as resources you cannot
+              open yet.
+            </p>
+          </Reveal>
+        </div>
+      </section>
 
-      {categories.map((category) => {
-        const items = resources.filter((r) => r.category === category);
-        return (
-          <section key={category} id={category.split(" ")[0].toLowerCase()} className="mb-12">
-            <h2 className="text-lg font-semibold text-deep mb-4 border-b border-border pb-2">
-              {category}
+      <section className="bg-deep text-cream">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-14 px-6 py-20 sm:px-8 sm:py-28 lg:grid-cols-12">
+          <Reveal className="lg:col-span-5">
+            <p className="text-[10px] uppercase tracking-[0.32em] text-gold-light">
+              Protect
+            </p>
+            <h2 className="mt-4 font-serif text-4xl leading-[1.08] text-cream text-balance sm:text-5xl">
+              The gray-divorce financial toolkit
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {items.map((resource) => {
-                const inner = (
-                  <div
-                    className={`bg-card border rounded-xl p-6 ${
-                      resource.status === "live"
-                        ? "border-gold hover:shadow-md"
-                        : "border-border opacity-70"
-                    } transition-all`}
-                  >
-                    <div className="flex items-start justify-between mb-2">
-                      <h3 className="font-semibold text-deep">{resource.title}</h3>
-                      <span
-                        className={`text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full shrink-0 ml-2 ${
-                          resource.status === "live"
-                            ? "bg-gold text-white"
-                            : "bg-border text-muted"
-                        }`}
-                      >
-                        {resource.status === "live" ? "Live" : "Soon"}
-                      </span>
-                    </div>
-                    <p className="text-sm text-muted">{resource.description}</p>
-                  </div>
-                );
+            <p className="mt-6 max-w-md text-sm leading-relaxed text-cream/65">
+              Four private tools turn a complicated transition into a workable
+              sequence. No account is required, and entries stay in your
+              browser.
+            </p>
+            <Link
+              href="/divorce"
+              className="mt-8 inline-flex text-sm font-medium text-gold-light underline decoration-gold-light/40 underline-offset-4 transition-colors hover:text-cream"
+            >
+              See the complete financial guide
+            </Link>
+          </Reveal>
 
-                if (resource.status === "live") {
-                  return resource.external ? (
-                    <a
-                      key={resource.title}
-                      href={resource.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {inner}
-                    </a>
-                  ) : (
-                    <Link key={resource.title} href={resource.href}>
-                      {inner}
-                    </Link>
-                  );
-                }
+          <div className="lg:col-span-6 lg:col-start-7">
+            {financialTools.map((tool, index) => (
+              <Reveal key={tool.href} delay={index * 0.04}>
+                <Link
+                  href={tool.href}
+                  className="group grid grid-cols-[2.5rem_1fr_auto] gap-4 border-t border-cream/15 py-6 first:border-t-0 lg:first:border-t"
+                >
+                  <span className="font-mono text-xs text-gold-light/70 tabular-nums">
+                    {tool.number}
+                  </span>
+                  <span>
+                    <span className="block font-serif text-xl text-cream transition-colors group-hover:text-gold-light">
+                      {tool.title}
+                    </span>
+                    <span className="mt-2 block text-xs leading-relaxed text-cream/50">
+                      {tool.description}
+                    </span>
+                  </span>
+                  <span aria-hidden="true" className="text-gold-light transition-transform group-hover:translate-x-1">
+                    &rarr;
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                return <div key={resource.title}>{inner}</div>;
-              })}
-            </div>
-          </section>
-        );
-      })}
-    </div>
+      <section className="mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-28">
+        <Reveal className="max-w-2xl">
+          <p className="text-[10px] uppercase tracking-[0.32em] text-gold-dark">
+            Define or expand
+          </p>
+          <h2 className="mt-4 font-serif text-4xl leading-tight text-deep text-balance sm:text-5xl">
+            Read toward a decision, not around a category.
+          </h2>
+        </Reveal>
+
+        <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-12">
+          {editorialRoutes.map((route, index) => (
+            <Reveal
+              key={route.href}
+              delay={index * 0.06}
+              className={index === 0 ? "md:col-span-7" : "md:col-span-5 md:mt-14"}
+            >
+              <Link
+                href={route.href}
+                className="group flex h-full min-h-72 flex-col justify-between border border-border bg-card p-8 transition-[border-color,transform] duration-200 hover:border-gold/60 active:scale-[0.99]"
+              >
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-gold-dark">
+                    {route.mode}
+                  </p>
+                  <h3 className="mt-10 max-w-xl font-serif text-3xl leading-tight text-deep text-balance">
+                    {route.title}
+                  </h3>
+                  <p className="mt-5 max-w-lg text-sm leading-relaxed text-muted">
+                    {route.description}
+                  </p>
+                </div>
+                <p className="mt-10 inline-flex items-center gap-3 text-sm font-medium text-deep">
+                  {route.action}
+                  <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">&rarr;</span>
+                </p>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-warm-white">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 py-20 sm:px-8 sm:py-24 lg:grid-cols-12">
+          <Reveal className="lg:col-span-4">
+            <p className="text-[10px] uppercase tracking-[0.32em] text-gold-dark">
+              Validation queue
+            </p>
+            <h2 className="mt-4 font-serif text-3xl leading-tight text-deep text-balance">
+              What may come next—if the audience asks for it.
+            </h2>
+          </Reveal>
+          <div className="divide-y divide-border border-y border-border lg:col-span-7 lg:col-start-6">
+            {validationQueue.map((item, index) => (
+              <Reveal key={item.title} delay={index * 0.04}>
+                <div className="py-6">
+                  <h3 className="font-serif text-xl text-deep">{item.title}</h3>
+                  <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted">
+                    {item.description}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <NewsletterPanel />
+    </>
   );
 }

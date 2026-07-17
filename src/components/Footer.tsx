@@ -12,8 +12,8 @@ export default function Footer() {
               <span className="font-serif text-xl text-deep">Crown Years</span>
             </div>
             <p className="text-sm text-muted max-w-sm leading-relaxed">
-              For women who are done waiting for permission. Your money, your
-              health, your career, your style, your rules.
+              Clear next moves for the consequential decisions of midlife —
+              practical tools, thoughtful editorial, and no condescension.
             </p>
           </div>
           <div>
@@ -49,9 +49,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#newsletter" className="hover:text-deep transition-colors duration-300">
-                  Newsletter
-                </a>
+                <Link href="/#letter" className="hover:text-deep transition-colors duration-300">
+                  The Crown Years Letter
+                </Link>
               </li>
             </ul>
           </div>

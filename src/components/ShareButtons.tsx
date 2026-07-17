@@ -9,7 +9,7 @@ export default function ShareButtons({ title, slug }: Props) {
   const url =
     typeof window !== "undefined"
       ? window.location.href
-      : `https://crownyears.com/blog/${slug}`;
+      : `https://crownyears.vercel.app/blog/${slug}`;
 
   const encodedUrl = encodeURIComponent(url);
   const encodedTitle = encodeURIComponent(title);

@@ -1,414 +1,285 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import AudiencePathways from "@/components/AudiencePathways";
+import NewsletterPanel from "@/components/NewsletterPanel";
 import Reveal from "@/components/Reveal";
-import NewsletterForm from "@/components/NewsletterForm";
 
-const pillars = [
+const toolSteps = [
   {
-    title: "Money & Independence",
-    subtitle: "Take control of every dollar.",
-    description:
-      "Divorce finances, retirement clarity, investment confidence. Tools that turn confusion into power.",
-    href: "/resources#money",
+    number: "01",
+    title: "Know what you own",
+    description: "Build a complete inventory of assets, accounts, debts, and documents.",
+    href: "/divorce/asset-checklist",
   },
   {
-    title: "Health & Vitality",
-    subtitle: "Optimizing, not declining.",
-    description:
-      "Hormones, longevity, fitness. Evidence-based, jargon-free, built for bodies that are evolving.",
-    href: "/resources#health",
+    number: "02",
+    title: "Model the settlement",
+    description: "See how different divisions affect the life you are planning next.",
+    href: "/divorce/settlement-calculator",
   },
   {
-    title: "Career & Purpose",
-    subtitle: "Your second act isn't a consolation prize.",
-    description:
-      "Reinvention frameworks, business blueprints, and the confidence to choose what comes next.",
-    href: "/resources#career",
+    number: "03",
+    title: "Prepare the questions",
+    description: "Bring 48 organized prompts into the room with your lawyer.",
+    href: "/divorce/lawyer-questions",
   },
   {
-    title: "Style & Identity",
-    subtitle: "Dress like you know exactly who you are.",
+    number: "04",
+    title: "Design the new budget",
+    description: "Map the monthly reality before you agree to a financial future.",
+    href: "/divorce/budget-planner",
+  },
+];
+
+const editorial = [
+  {
+    label: "The Crown Edit",
+    title: "The 30 pieces that make the rest of the wardrobe unnecessary",
     description:
-      "Capsule wardrobes, quiet luxury, your signature look. Because style after 45 is a declaration, not a compromise.",
-    href: "/resources#style",
+      "A French-informed capsule system built around fit, material, and fewer decisions.",
+    image: "/blog/capsule-wardrobe-flatlay.jpg",
+    alt: "A considered capsule wardrobe arranged on a warm neutral background",
+    href: "/blog/capsule-wardrobe-over-50",
+    className: "lg:col-span-7",
   },
   {
-    title: "Travel & Adventure",
-    subtitle: "The world gets better when you do.",
+    label: "The wider map",
+    title: "Fifteen solo destinations, ordered by how ready you feel",
     description:
-      "Solo trips, transformative retreats, and destinations designed for women who travel with intention.",
-    href: "/resources#travel",
-  },
-  {
-    title: "Connection & Community",
-    subtitle: "Real women. Real conversations.",
-    description:
-      "Not networking. Not small talk. A circle of women who are living the same transformation you are.",
-    href: "/resources#community",
+      "Start with the trip that is easy enough to book and meaningful enough to matter.",
+    image: "/blog/solo-travel-amalfi.jpg",
+    alt: "A woman looking across the Amalfi coast during a solo trip",
+    href: "/blog/solo-travel-women-over-50",
+    className: "lg:col-span-5 lg:mt-24",
   },
 ];
 
 export default function Home() {
   return (
     <>
-      {/* Hero — editorial, asymmetric text, not centered */}
-      <section className="bg-cream border-b border-border overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 py-20 sm:py-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div>
-              <Reveal>
-                <p className="text-[11px] uppercase tracking-[0.35em] text-gold mb-6">
-                  For Women Who Are Done Asking Permission
-                </p>
-              </Reveal>
-              <Reveal delay={0.1}>
-                <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-medium text-deep mb-8 leading-[1.05]">
-                  This is
-                  <br />
-                  your era.
-                  <br />
-                  <span className="text-gold italic">Wear the crown.</span>
-                </h1>
-              </Reveal>
-              <Reveal delay={0.2}>
-                <p className="text-lg text-muted max-w-md mb-10 leading-relaxed font-light">
-                  You spent decades building everyone else&apos;s life. Crown
-                  Years is for the woman who&apos;s finally building her own.
-                </p>
-              </Reveal>
-              <Reveal delay={0.3}>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="#resources"
-                    className="inline-block bg-deep text-cream px-8 py-3.5 rounded-full text-sm tracking-wide hover:bg-gold active:scale-[0.98] transition-all duration-300"
-                  >
-                    Explore Free Resources
-                  </a>
-                  <a
-                    href="#newsletter"
-                    className="inline-block border border-deep text-deep px-8 py-3.5 rounded-full text-sm tracking-wide hover:bg-deep hover:text-cream active:scale-[0.98] transition-all duration-300"
-                  >
-                    Join the Letter
-                  </a>
-                </div>
-              </Reveal>
-            </div>
-            <Reveal delay={0.2} direction="right">
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
+      <section className="overflow-hidden border-b border-border bg-background">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-14 px-6 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-24 lg:grid-cols-12 lg:items-center lg:gap-10">
+          <div className="lg:col-span-7 lg:pr-12">
+            <Reveal>
+              <p className="mb-7 text-[10px] uppercase tracking-[0.34em] text-gold-dark">
+                For women 45–65, on their own terms
+              </p>
+            </Reveal>
+            <Reveal delay={0.06}>
+              <h1 className="max-w-3xl font-serif text-[3.25rem] leading-[0.98] tracking-[-0.045em] text-deep text-balance sm:text-6xl lg:text-7xl">
+                What comes next belongs to you.
+              </h1>
+            </Reveal>
+            <Reveal delay={0.12}>
+              <p className="mt-8 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+                Crown Years turns consequential midlife decisions into clear
+                next moves—in money, identity, travel, strength, and connection.
+                Start with the choice asking for your attention now.
+              </p>
+            </Reveal>
+            <Reveal delay={0.18}>
+              <div className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center">
+                <a
+                  href="#start"
+                  className="inline-flex items-center gap-3 bg-deep px-7 py-3.5 text-sm font-medium text-cream transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-gold-dark active:scale-[0.98]"
+                >
+                  Find your starting point
+                  <span aria-hidden="true">&darr;</span>
+                </a>
+                <Link
+                  href="/divorce"
+                  className="text-sm font-medium text-deep underline decoration-gold/50 underline-offset-4 transition-colors duration-200 hover:text-gold-dark"
+                >
+                  Use the gray-divorce tools
+                </Link>
+              </div>
+            </Reveal>
+          </div>
+
+          <Reveal delay={0.12} direction="right" className="lg:col-span-5">
+            <figure className="relative lg:ml-auto lg:max-w-md">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem_2.5rem_0.75rem_2.5rem]">
                 <Image
                   src="/blog/hero-kitchen-morning.jpg"
-                  alt="Woman in her crown years — confident, independent, sovereign"
+                  alt="A woman beginning a quiet morning in a light-filled kitchen"
                   fill
                   className="object-cover"
                   priority
+                  sizes="(max-width: 1024px) 100vw, 38vw"
                 />
               </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Manifesto — full-bleed dark, quote mark accent */}
-      <section className="bg-deep text-cream">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 py-20 sm:py-28">
-          <Reveal>
-            <p className="font-serif text-6xl text-gold-light/30 leading-none mb-4">
-              &ldquo;
-            </p>
-            <p className="font-serif text-2xl sm:text-3xl lg:text-[2.5rem] leading-[1.45] font-light">
-              Women over 50 control 78% of national wealth and appear in fewer
-              than 10% of ads. We outspend millennials by 250%. We are the most
-              powerful consumer force on Earth — and we are done being
-              invisible.
-            </p>
+              <figcaption className="absolute -bottom-6 left-5 max-w-[16rem] border border-border bg-card px-5 py-4 text-xs leading-relaxed text-muted shadow-[0_16px_40px_-24px_rgba(80,61,45,0.35)] sm:left-8">
+                Not a restart. A change in authorship.
+              </figcaption>
+            </figure>
           </Reveal>
         </div>
       </section>
 
-      {/* Pillars — asymmetric 2-col, NOT a 3-col grid */}
-      <section className="max-w-6xl mx-auto px-6 sm:px-8 py-24 sm:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div className="lg:col-span-4 lg:sticky lg:top-28">
-            <Reveal>
-              <p className="text-[11px] uppercase tracking-[0.35em] text-gold mb-4">
-                Six Pillars
+      <section aria-label="Market context" className="border-b border-border bg-warm-white">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-3 px-6 py-7 sm:px-8 md:grid-cols-[auto_1fr_auto] md:items-center md:gap-8">
+          <p className="font-mono text-2xl text-gold-dark tabular-nums">$12.5T</p>
+          <p className="max-w-2xl text-sm leading-relaxed text-muted">
+            Adults 50+ accounted for 43% of U.S. economic activity in 2024.
+            The opportunity is not convincing this audience to spend. It is
+            serving the decision in front of her better.
+          </p>
+          <a
+            href="https://www.aarp.org/pri/topics/work-finances-retirement/economics-aging/longevity-economy-outlook/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-xs text-muted underline decoration-border underline-offset-4 transition-colors duration-200 hover:text-deep"
+          >
+            AARP, 2026
+          </a>
+        </div>
+      </section>
+
+      <section id="start" className="scroll-mt-24">
+        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-8 sm:py-32">
+          <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
+            <Reveal className="lg:col-span-7">
+              <p className="mb-4 text-[10px] uppercase tracking-[0.32em] text-gold-dark">
+                Start where you are
               </p>
-              <h2 className="font-serif text-4xl sm:text-5xl text-deep mb-6 leading-[1.1]">
-                Everything is connected.
+              <h2 className="font-serif text-4xl leading-[1.08] text-deep text-balance sm:text-5xl">
+                Midlife is not one problem. It is several doors opening at once.
               </h2>
-              <p className="text-muted text-sm leading-relaxed">
-                Other brands sell menopause trackers OR career advice OR fashion
-                guides. We know you&apos;re living all of it at once.
+            </Reveal>
+            <Reveal delay={0.08} className="lg:col-span-4 lg:col-start-9">
+              <p className="text-sm leading-relaxed text-muted">
+                Choose the sentence closest to the decision in front of you.
+                Every route below leads somewhere useful today.
               </p>
             </Reveal>
           </div>
-          <div className="lg:col-span-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border rounded-2xl overflow-hidden">
-              {pillars.map((pillar, i) => (
-                <Reveal key={pillar.title} delay={i * 0.06}>
-                  <Link
-                    href={pillar.href}
-                    className="block bg-background p-8 hover:bg-cream transition-colors duration-300 group h-full"
-                  >
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-gold mb-3">
-                      {pillar.subtitle}
-                    </p>
-                    <h3 className="font-serif text-xl text-deep mb-2 group-hover:text-gold transition-colors duration-300">
-                      {pillar.title}
-                    </h3>
-                    <p className="text-sm text-muted leading-relaxed">
-                      {pillar.description}
-                    </p>
-                  </Link>
-                </Reveal>
-              ))}
-            </div>
-          </div>
+          <AudiencePathways />
         </div>
       </section>
 
-      {/* Featured tool — no "coming soon" clutter */}
-      <section id="resources" className="bg-cream border-t border-b border-border">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 py-24 sm:py-32">
-          <Reveal>
-            <p className="text-[11px] uppercase tracking-[0.35em] text-gold mb-4">
-              Free Resources
+      <section className="bg-deep text-cream">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-16 px-6 py-24 sm:px-8 sm:py-32 lg:grid-cols-12 lg:gap-12">
+          <Reveal className="lg:col-span-5">
+            <p className="mb-4 text-[10px] uppercase tracking-[0.32em] text-gold-light">
+              Live financial system
             </p>
-            <h2 className="font-serif text-4xl sm:text-5xl text-deep mb-16 leading-[1.1]">
-              Tools that move you forward.
+            <h2 className="font-serif text-4xl leading-[1.08] text-cream text-balance sm:text-5xl">
+              Walk into gray divorce knowing your numbers.
             </h2>
-          </Reveal>
-
-          <Reveal delay={0.1}>
+            <p className="mt-6 max-w-md text-sm leading-relaxed text-cream/65">
+              Four private tools turn a complicated financial transition into a
+              sequence you can work through. Nothing is stored. No account is
+              required.
+            </p>
             <Link
               href="/divorce"
-              className="block bg-card border border-gold/30 rounded-2xl p-10 sm:p-12 hover:border-gold hover:shadow-[0_8px_30px_rgba(184,148,79,0.12)] transition-all duration-500 group"
+              className="group mt-8 inline-flex items-center gap-3 text-sm font-medium text-gold-light underline decoration-gold-light/40 underline-offset-4 transition-colors duration-200 hover:text-cream"
             >
-              <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-8 items-center">
-                <div>
-                  <span className="inline-block text-[10px] uppercase tracking-[0.3em] bg-gold text-white px-3 py-1 rounded-full mb-5">
-                    Live Now
-                  </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl text-deep mb-3 group-hover:text-gold transition-colors duration-300">
-                    Gray Divorce Financial Guide
-                  </h3>
-                  <p className="text-muted text-sm leading-relaxed max-w-lg">
-                    Interactive asset checklist, settlement calculator, lawyer
-                    question scripts, and post-divorce budget planner. Free,
-                    private, no account needed.
-                  </p>
-                </div>
-                <span className="text-gold text-3xl group-hover:translate-x-2 transition-transform duration-300 hidden sm:block">
-                  &#8594;
-                </span>
-              </div>
+              See the complete toolkit
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-200 group-hover:translate-x-1"
+              >
+                &rarr;
+              </span>
             </Link>
           </Reveal>
 
-          <Reveal delay={0.2}>
-            <p className="text-center text-xs text-muted mt-12">
-              More tools launching soon — capsule wardrobe builder, reinvention
-              planner, solo travel guide, and more.
+          <div className="lg:col-span-6 lg:col-start-7">
+            {toolSteps.map((step, index) => (
+              <Reveal key={step.href} delay={index * 0.05}>
+                <Link
+                  href={step.href}
+                  className="group grid grid-cols-[2.5rem_1fr_auto] gap-4 border-t border-cream/15 py-6 first:border-t-0 lg:first:border-t"
+                >
+                  <span className="font-mono text-xs text-gold-light/70 tabular-nums">
+                    {step.number}
+                  </span>
+                  <span>
+                    <span className="block font-serif text-xl text-cream transition-colors duration-200 group-hover:text-gold-light">
+                      {step.title}
+                    </span>
+                    <span className="mt-2 block max-w-md text-xs leading-relaxed text-cream/50">
+                      {step.description}
+                    </span>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="text-gold-light transition-transform duration-200 group-hover:translate-x-1"
+                  >
+                    &rarr;
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-24 sm:px-8 sm:py-32">
+        <Reveal>
+          <div className="mb-14 max-w-2xl">
+            <p className="mb-4 text-[10px] uppercase tracking-[0.32em] text-gold-dark">
+              Read with a purpose
+            </p>
+            <h2 className="font-serif text-4xl leading-[1.08] text-deep text-balance sm:text-5xl">
+              Editorial that leaves you with a decision made.
+            </h2>
+          </div>
+        </Reveal>
+
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
+          {editorial.map((item, index) => (
+            <Reveal key={item.href} delay={index * 0.08} className={item.className}>
+              <Link href={item.href} className="group block">
+                <div className="relative aspect-[4/3] overflow-hidden bg-cream">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.02]"
+                    sizes="(max-width: 1024px) 100vw, 58vw"
+                  />
+                </div>
+                <p className="mt-6 text-[10px] uppercase tracking-[0.3em] text-gold-dark">
+                  {item.label}
+                </p>
+                <h3 className="mt-3 max-w-2xl font-serif text-2xl leading-tight text-deep text-balance transition-colors duration-200 group-hover:text-gold-dark sm:text-3xl">
+                  {item.title}
+                </h3>
+                <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
+                  {item.description}
+                </p>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-background">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 py-24 sm:px-8 sm:py-28 lg:grid-cols-12">
+          <Reveal className="lg:col-span-4">
+            <p className="text-[10px] uppercase tracking-[0.32em] text-gold-dark">
+              The point of view
             </p>
           </Reveal>
-        </div>
-      </section>
-
-      {/* Permission section — LEFT-ALIGNED heading, different rhythm */}
-      <section className="max-w-5xl mx-auto px-6 sm:px-8 py-24 sm:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <Reveal direction="left">
-            <div>
-              <p className="text-[11px] uppercase tracking-[0.35em] text-gold mb-4">
-                The Truth
-              </p>
-              <h2 className="font-serif text-4xl sm:text-5xl text-deep mb-8 leading-[1.1]">
-                You don&apos;t need more advice.
-                <br />
-                <span className="italic text-gold">
-                  You need permission.
-                </span>
-              </h2>
-              <div className="space-y-5 text-muted leading-relaxed">
-                <p>
-                  You know you deserve better. You know this isn&apos;t what the
-                  rest of your life looks like. You know you have the money, the
-                  brains, and the drive.
-                </p>
-                <p>
-                  The only thing missing is someone saying:{" "}
-                  <strong className="text-deep font-serif text-lg italic">
-                    go.
-                  </strong>
-                </p>
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal direction="right" delay={0.2}>
-            <div className="bg-cream rounded-2xl p-10 border border-border">
-              <p className="font-serif text-xl text-deep mb-6 italic">
-                You&apos;re allowed to...
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "Spend money on yourself without justifying it",
-                  "Leave a marriage that stopped working years ago",
-                  "Start a business at 55 and be extraordinary",
-                  "Wear whatever you want",
-                  "Travel alone and love every second",
-                  "Put yourself first — finally",
-                  "Take up space. Be impossible to ignore.",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm">
-                    <svg viewBox="0 0 6 6" className="w-1.5 h-1.5 mt-2 shrink-0 fill-gold"><circle cx="3" cy="3" r="3"/></svg>
-                    <span className="text-deep leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <Reveal delay={0.06} className="lg:col-span-7 lg:col-start-6">
+            <p className="font-serif text-3xl leading-[1.35] text-deep text-balance sm:text-4xl">
+              You do not need to be reduced to your age, your hormones, your
+              marriage, or your hair. You need accurate information, considered
+              options, and room to decide.
+            </p>
+            <Link
+              href="/about"
+              className="mt-8 inline-flex text-sm font-medium text-deep underline decoration-gold/50 underline-offset-4 transition-colors duration-200 hover:text-gold-dark"
+            >
+              Read what Crown Years believes
+            </Link>
           </Reveal>
         </div>
       </section>
 
-      {/* Stats — horizontal line layout, not boxed grid */}
-      <section className="bg-deep text-cream overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 py-20 sm:py-28">
-          <Reveal>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-8">
-              {[
-                { num: "250%", label: "more spending power than millennials" },
-                { num: "78%", label: "of national wealth controlled by women 50+" },
-                { num: "2.8x", label: "more likely to succeed in business after 50" },
-                { num: "70%", label: "of $124T wealth transfer going to women" },
-              ].map((stat, i) => (
-                <div
-                  key={stat.num}
-                  className={`${i > 0 ? "lg:border-l lg:border-cream/10 lg:pl-8" : ""}`}
-                >
-                  <p className="font-serif text-4xl sm:text-5xl text-gold-light mb-3">
-                    {stat.num}
-                  </p>
-                  <p className="text-xs text-cream/50 leading-relaxed">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Before / After — full-width, clean separation */}
-      <section className="max-w-4xl mx-auto px-6 sm:px-8 py-24 sm:py-32">
-        <Reveal>
-          <p className="text-[11px] uppercase tracking-[0.35em] text-gold mb-4">
-            The Transformation
-          </p>
-          <h2 className="font-serif text-4xl sm:text-5xl text-deep mb-16 leading-[1.1]">
-            Before clarity.
-            <br />
-            <span className="italic text-gold">After sovereignty.</span>
-          </h2>
-        </Reveal>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border rounded-2xl overflow-hidden">
-          <Reveal direction="none" delay={0.1}>
-            <div className="bg-background p-10 sm:p-12">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-muted mb-6">
-                Before
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "Overwhelmed by paperwork you've never seen",
-                  "Afraid of what you don't know",
-                  "Dependent on someone else's decisions",
-                  "Walking into meetings unprepared",
-                  "Accepting what's offered because you don't know better",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 text-sm text-muted"
-                  >
-                    <span className="text-rose/60 mt-0.5 shrink-0">
-                      &#8212;
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Reveal>
-          <Reveal direction="none" delay={0.2}>
-            <div className="bg-cream p-10 sm:p-12">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-gold mb-6">
-                After
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "Complete picture of every asset and debt",
-                  "Confidence backed by numbers",
-                  "Financial independence you designed",
-                  "The most prepared person in every room",
-                  "A budget built around the life you want",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 text-sm text-deep"
-                  >
-                    <svg viewBox="0 0 6 6" className="w-1.5 h-1.5 mt-2 shrink-0 fill-gold"><circle cx="3" cy="3" r="3"/></svg>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Newsletter — left-aligned for variety */}
-      <section id="newsletter" className="bg-cream border-t border-border">
-        <div className="max-w-5xl mx-auto px-6 sm:px-8 py-24 sm:py-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <Reveal>
-              <div>
-                <p className="text-[11px] uppercase tracking-[0.35em] text-gold mb-4">
-                  The Crown Years Letter
-                </p>
-                <h2 className="font-serif text-4xl sm:text-5xl text-deep mb-6 leading-[1.1]">
-                  One email a week.
-                  <br />
-                  <span className="italic text-gold">
-                    Zero permission required.
-                  </span>
-                </h2>
-                <p className="text-muted text-sm leading-relaxed max-w-md">
-                  Tools, insights, and the occasional reminder that you are the
-                  most powerful consumer force on the planet.
-                </p>
-              </div>
-            </Reveal>
-            <Reveal delay={0.15}>
-              <div>
-                <NewsletterForm />
-                <p className="text-xs text-muted mt-5">
-                  No spam. Unsubscribe anytime. We respect your time.
-                </p>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust strip — horizontal, minimal */}
-      <section className="border-t border-border">
-        <div className="max-w-5xl mx-auto px-6 sm:px-8 py-12">
-          <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-16 text-center text-xs text-muted">
-            <span>100% Free &mdash; No paywalls</span>
-            <span>Completely Private &mdash; Nothing stored</span>
-            <span>No Account Needed &mdash; Just use it</span>
-          </div>
-        </div>
-      </section>
+      <NewsletterPanel />
     </>
   );
 }

@@ -5,7 +5,8 @@ import { notFound } from "next/navigation";
 import { getAllSlugs, getPost, formatDate } from "@/lib/blog";
 import TableOfContents from "@/components/TableOfContents";
 import RelatedPosts from "@/components/RelatedPosts";
-import NewsletterForm from "@/components/NewsletterForm";
+import ArticleNextStep from "@/components/ArticleNextStep";
+import NewsletterPanel from "@/components/NewsletterPanel";
 import Reveal from "@/components/Reveal";
 import ShareButtons from "@/components/ShareButtons";
 import CrownIcon from "@/components/CrownIcon";
@@ -83,7 +84,7 @@ export default async function BlogPost({
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://crownyears.com/blog/${slug}`,
+      "@id": `https://crownyears.vercel.app/blog/${slug}`,
     },
   };
 
@@ -184,26 +185,17 @@ export default async function BlogPost({
           <div>
             <p className="font-serif text-lg text-deep mb-1">Crown Years</p>
             <p className="text-sm text-muted leading-relaxed">
-              Evidence-based tools, guides, and resources for women 45+ who are
-              done being invisible. We sell permission, not products.
+              Evidence-led tools and editorial for women making consequential
+              choices in money, identity, travel, strength, and connection.
             </p>
           </div>
         </div>
 
-        {/* Newsletter CTA */}
-        <section className="mt-16 p-10 bg-cream rounded-2xl border border-border text-center">
-          <p className="text-[11px] uppercase tracking-[0.35em] text-gold mb-3">
-            The Crown Years Letter
-          </p>
-          <h3 className="font-serif text-2xl text-deep mb-3">
-            One email a week. Zero permission required.
-          </h3>
-          <p className="text-muted text-sm mb-6 max-w-sm mx-auto">
-            Tools, insights, and the occasional reminder that you are the most
-            powerful consumer force on the planet.
-          </p>
-          <NewsletterForm />
-        </section>
+        <ArticleNextStep slug={slug} />
+
+        <div className="mt-16">
+          <NewsletterPanel compact />
+        </div>
 
         {/* Related posts */}
         <RelatedPosts
